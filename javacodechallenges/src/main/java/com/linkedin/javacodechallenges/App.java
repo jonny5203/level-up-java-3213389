@@ -14,7 +14,12 @@ public class App {
             Map.entry('Z', 10));
 
     public static int wordScoreCalculator(String word) {
-        return 0;
+        char[] charArray = word.toCharArray();
+        int wordScore = 0;
+        for (char c : charArray) {
+            wordScore += letterPoints.get(c);
+        }
+        return wordScore;
     }
 
     public static void main(String[] args) {
